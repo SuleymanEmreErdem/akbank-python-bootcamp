@@ -48,7 +48,7 @@ class TurkishPizza(Pizza):
         return 18
 
 
-class DominosPizza(Pizza):
+class SadePizza(Pizza):
     def __init__(self):
         self.description = "Sade Pizza"
     
@@ -65,13 +65,13 @@ class OliveSauce(PizzaDecorator):
 class MushroomSauce(PizzaDecorator):
     def __init__(self, component):
         self.component = component
-        self.description = "Mantarlı"
+        self.description = "Mantar Soslu"
 
 
 class GoatCheeseSauce(PizzaDecorator):
     def __init__(self, component):
         self.component = component
-        self.description = "Keçi Peynirli"
+        self.description = "Keçi Peyniri Soslu"
 
 
 class MeatSauce(PizzaDecorator):
@@ -112,7 +112,7 @@ def main():
         elif pizza_input == "3":
             pizza = TurkishPizza()
         elif pizza_input == "4":
-            pizza = DominosPizza()
+            pizza = SadePizza()
         else:
             print("Invalid input. Please try again.")
 
