@@ -24,7 +24,7 @@ class PizzaDecorator(Pizza):
         return self.component.get_cost() + Pizza.get_cost(self)
 
 
-class KlasikPizza(Pizza):
+class ClassicPizza(Pizza):
     def __init__(self):
         self.description = "Klasik Pizza"
     
@@ -48,7 +48,7 @@ class TurkishPizza(Pizza):
         return 18
 
 
-class SadePizza(Pizza):
+class PlainPizza(Pizza):
     def __init__(self):
         self.description = "Sade Pizza"
     
@@ -106,13 +106,13 @@ def main():
     while pizza is None:
         pizza_input = input("Please select a pizza: ")
         if pizza_input == "1":
-            pizza = KlasikPizza()
+            pizza = ClassicPizza()
         elif pizza_input == "2":
             pizza = MargheritaPizza()
         elif pizza_input == "3":
             pizza = TurkishPizza()
         elif pizza_input == "4":
-            pizza = SadePizza()
+            pizza = PlainPizza()
         else:
             print("Invalid input. Please try again.")
 
